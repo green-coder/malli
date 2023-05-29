@@ -1667,7 +1667,6 @@
            (-regex-min-max [this _] (-fail! ::potentially-recursive-seqex this))))))))
 
 (defn -schema-schema [{:keys [id raw]}]
-  ^{:type ::into-schema}
   (let [internal (or id raw)
         type (if internal ::schema :schema)]
     ^{:type ::into-schema}
